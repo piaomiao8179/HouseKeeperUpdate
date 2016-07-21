@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animation-list xmlns:android="http://schemas.android.com/apk/res/android"
+    android:oneshot="true">
+        <!--<item android:drawable="@mipmap/logo_1"-->
+              <!--android:duration="500"/>-->
+        <!--<item android:drawable="@mipmap/logo_2"-->
+          <!--android:duration="500"/>-->
+        <!--<item android:drawable="@mipmap/logo_3"-->
+          <!--android:duration="500"/>-->
+        <!--<item android:drawable="@mipmap/logo_4"-->
+          <!--android:duration="500"/>-->
+         <!--<item android:drawable="@mipmap/logo_5"-->
+          <!--android:duration="500"/>-->
+    <item
+        android:drawable="@drawable/title_log1"
+        android:duration="500"></item>
+    <item
+        android:drawable="@drawable/title_log2"
+        android:duration="500"></item>
+    <item
+        android:drawable="@drawable/title_log3"
+        android:duration="500"></item>
+    <item
+        android:drawable="@drawable/title_log4"
+        android:duration="500"></item>
+    <item
+        android:drawable="@drawable/title_log5"
+        android:duration="500"></item>
+    <item
+        android:drawable="@drawable/title_log6"
+        android:duration="500"></item>
+    <item
+        android:drawable="@drawable/title_log7"
+        android:duration="500"></item>
+    <item
+        android:drawable="@drawable/title_log8"
+        android:duration="500"></item>
+    <item
+        android:drawable="@drawable/title_log9"
+        android:duration="500"></item>
+    <item
+        android:drawable="@drawable/title_log10"
+        android:duration="500"></item>
+    <item
+        android:drawable="@drawable/title_log11"
+        android:duration="500"></item>
+    <item
+        android:drawable="@drawable/title_log12"
+        android:duration="500"></item>
+    <item
+        android:drawable="@drawable/title_log13"
+        android:duration="500"></item>
+    <item
+        android:drawable="@drawable/title_log14"
+        android:duration="500"></item>
+    <item
+        android:drawable="@drawable/title_log15"
+        android:duration="500"></item>
+    <item
+        android:drawable="@drawable/title_log16"
+        android:duration="500"></item>
+    <item
+        android:drawable="@drawable/title_log17"
+        android:duration="500"></item>
+    <item
+        android:drawable="@drawable/title_log18"
+        android:duration="500"></item>
+    <item
+        android:drawable="@drawable/title_log19"
+        android:duration="500"></item>
+    <item
+        android:drawable="@drawable/title_log20"
+        android:duration="500"></item>
+    <item
+        android:drawable="@drawable/title_log21"
+        android:duration="500"></item>
+    <item
+        android:drawable="@drawable/title_log22"
+        android:duration="500"></item>
+
+
+
+</animation-list>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    tools:context=".ui.TelSortActivity">
+    <android.support.v7.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#34ddcf"
+        app:title="通讯录大全"
+        android:id="@+id/toolbar"
+        app:titleTextColor="#ec1919"
+        app:subtitle="详细记录全国大小的各种类电话"
+        app:logo="@drawable/ic_launcher"
+        >
+
+    </android.support.v7.widget.Toolbar>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="140dp"
+        android:text="一站式电话服务,您最贴心的手机管家"
+        android:id="@+id/textView"
+        android:textSize="30sp"
+        android:gravity="center"
+        android:background="#f6d623"
+        android:layout_gravity="center_horizontal"
+        />
+
+    <GridView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/gridView"
+        android:numColumns="2"
+        android:columnWidth="150dp"
+        android:horizontalSpacing="1.0px"
+        android:verticalSpacing="1.0px"
+        android:gravity="center"
+        android:layout_gravity="center_horizontal"
+        android:background="#748787"/>
+
+    <!--<ListView-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:id="@+id/lv_showphone"-->
+        <!--android:layout_gravity="center_horizontal"/>-->
+
+
+</LinearLayout>

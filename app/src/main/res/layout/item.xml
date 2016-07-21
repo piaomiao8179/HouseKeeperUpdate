@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="#f7f3f3"
+    android:orientation="horizontal"
+    >
+
+    <!--<TextView-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="40dp"-->
+        <!--android:text="中心号码"-->
+        <!--android:textSize="20sp"-->
+        <!--android:gravity="center"-->
+        <!--android:textColor="#000"-->
+        <!--android:layout_weight="1"-->
+        <!--android:background="#b6c2c3"-->
+        <!--android:id="@+id/tv_name"/>-->
+
+    <!--<TextView-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="40dp"-->
+        <!--android:text="New Text"-->
+        <!--android:textSize="20sp"-->
+        <!--android:gravity="center"-->
+        <!--android:textColor="#000"-->
+        <!--android:layout_weight="1"-->
+        <!--android:background="#b6c2c3"-->
+        <!--android:id="@+id/tv_number"/>-->
+    <TextView
+        android:layout_width="150dp"
+
+        android:layout_height="80dp"
+        android:text="New Text"
+        android:textSize="20sp"
+        android:id="@+id/tv_name"
+        android:gravity="center"
+        android:drawableRight="@drawable/ic_arrows_right"
+        android:textColor="#000"/>
+
+    <!--<TextView-->
+        <!--android:layout_width="100dp"-->
+        <!--android:layout_height="40dp"-->
+        <!--android:text="New Text"-->
+        <!--android:textSize="20sp"-->
+        <!--android:gravity="center"-->
+        <!--android:id="@+id/tv_number"-->
+        <!--android:textColor="#000"/>-->
+</LinearLayout>

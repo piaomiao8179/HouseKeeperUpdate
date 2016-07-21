@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:app="http://schemas.android.com/apk/res-auto">
+        <item
+            android:id="@+id/it"
+            android:icon="@mipmap/ic_sousuo"
+            android:title="搜索"
+            app:showAsAction="never"
+            />
+        <item
+            android:id="@+id/it_1"
+            android:icon="@mipmap/ic_zuo"
+            android:title="错号"
+            app:showAsAction="never"
+            />
+        <item
+            android:id="@+id/it_2"
+            android:icon="@mipmap/ic_child_configs"
+            android:title="隐藏"
+            app:showAsAction="never"
+            />
+</menu>

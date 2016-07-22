@@ -22,7 +22,7 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="140dp"
-        android:text="一站式电话服务,您最贴心的手机管家"
+        android:text="看什么看！有种你拨110！"
         android:id="@+id/textView"
         android:textSize="30sp"
         android:gravity="center"

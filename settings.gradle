@@ -1,1 +1,1 @@
-include ':app', ':viewpager', ':studentmanager'
+include ':app', ':viewpager', ':studentmanager', ':mylibrary'

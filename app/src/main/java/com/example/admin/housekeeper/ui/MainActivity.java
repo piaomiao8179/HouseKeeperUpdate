@@ -28,9 +28,10 @@ import java.io.IOException;
 import java.io.InputStream;
 
 public class MainActivity extends AppCompatActivity implements  AdapterView.OnItemClickListener, Toolbar.OnMenuItemClickListener {
-    private long                mStartTime;
-    private GridView            mView;
+    private long                mStartTime;//开始时间（按两下返回键退出）onkeydown方法
+    private GridView            mView;//主界面展示控件
     private Toolbar mToolbar;
+    //主界面要展示的图标
     private int[]    mIcon = {R.drawable.icon_rocket, R.drawable.icon_softmgr, R.drawable.icon_phonemgr,
             R.drawable.icon_telmgr, R.drawable.icon_filemgr, R.drawable.icon_sdclean};
     private String[] mName = {"手机加速", "软件管理", "手机检测", "通讯大全", "文件管理", "垃圾清理"};
@@ -39,11 +40,16 @@ public class MainActivity extends AppCompatActivity implements  AdapterView.OnIt
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        //初始化控件
         mView = (GridView) findViewById(R.id.gv_show);
         mToolbar = (Toolbar) findViewById(R.id.toolbar_main);
+        //设置适配器
         mView.setAdapter(mAdapter);
+        //设置监听
         mView.setOnItemClickListener(this);
+        //设置替代actionbar
         setSupportActionBar(mToolbar);
+        //toolbar的菜单监听
         mToolbar.setOnMenuItemClickListener(this);
 
 
@@ -55,6 +61,7 @@ public class MainActivity extends AppCompatActivity implements  AdapterView.OnIt
      * @param
      */
     public void moveData() throws IOException {
+        //判断是否存在数据库文件  不存在   创建
         if (!DBReader.isExsitDBFile()) {
             String path = "data/data/com.example.admin.housekeeper/commonnum.db";
             AssetManager manager = getAssets();
@@ -90,17 +97,19 @@ public class MainActivity extends AppCompatActivity implements  AdapterView.OnIt
         }
         return super.onKeyDown(keyCode, event);
     }
-    //点击事件，进行跳转到通讯录大全界面
+    //点击事件，进行跳转到对应模块界面（如通讯录大全）
     @Override
     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
         switch (position){
             case 2:
+                //手机检测
                 Intent intent1 = new Intent(MainActivity.this, PhoneInfoActivity.class);
                 startActivity(intent1);
 
                 break;
 
             case 3:
+                //通讯大全
                 try {
                     moveData();
                 } catch (IOException e) {
@@ -111,6 +120,7 @@ public class MainActivity extends AppCompatActivity implements  AdapterView.OnIt
 
                 break;
             case 1:
+                //手机软件信息
                 Intent it = new Intent(MainActivity.this, AppInfoActivity.class);
                 startActivity(it);
 
@@ -119,20 +129,24 @@ public class MainActivity extends AppCompatActivity implements  AdapterView.OnIt
         }
     }
 
+   //toolbar右侧下拉选项菜单
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.menu_main,menu);
         return true;
     }
 
+    /**
+     * toolbar的点击事件
+     */
     @Override
     public boolean onMenuItemClick(MenuItem item) {
         Toast.makeText(this,"点击了Toolbar",Toast.LENGTH_SHORT).show();
         return false;
     }
 
-    /*
-   主界面adapter
+    /**
+     *主界面的adapter 展示主界面分类的数据信息
      */
     BaseAdapter mAdapter = new BaseAdapter() {
         @Override

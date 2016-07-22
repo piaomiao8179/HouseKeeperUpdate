@@ -82,7 +82,7 @@ public class ViewpagerActivity extends AppCompatActivity implements View.OnClick
     };
 
     /**
-     * 实现在引导页面当点击跳转的时候跳转到AplashActivity并为第二次再进入程序时为直接跳转过引导页面做标记
+     * 实现在引导页面当点击跳转的时候跳转到SplashActivity并为第二次再进入程序时为直接跳转过引导页面做标记
      * @param v
      */
     @Override
@@ -99,7 +99,7 @@ public class ViewpagerActivity extends AppCompatActivity implements View.OnClick
     }
 
     /**
-     * 一个图形效果，滑动由下而上有层次感。
+     * viewpager的动画效果，滑动时由下而上有层次感。（此处 不用看）
      */
     public class DepthPageTransformer implements ViewPager.PageTransformer {
         private static final float MIN_SCALE = 0.75f;

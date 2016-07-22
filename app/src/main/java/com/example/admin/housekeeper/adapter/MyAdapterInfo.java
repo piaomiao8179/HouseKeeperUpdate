@@ -15,6 +15,7 @@ import java.util.Arrays;
 
 /**
  * Created by Administrator on 2016/7/20.
+ * 手机检测信息（设备名称  品牌  内存大小等）
  */
 public class MyAdapterInfo extends BaseAdapter {
     public static String[] sTextTop;
@@ -78,6 +79,7 @@ public class MyAdapterInfo extends BaseAdapter {
         return convertView;
     }
 
+    //优化
     private static class ViewHolder {
         ImageView mImageView;
         TextView  mTextViewTop;

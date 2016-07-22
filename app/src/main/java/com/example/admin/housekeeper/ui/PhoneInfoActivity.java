@@ -27,6 +27,9 @@ public class PhoneInfoActivity extends AppCompatActivity {
 
     }
 
+    /**
+     * 初始化控件
+     */
     private void initView() {
         mTvBattery = (TextView) findViewById(R.id.tv_battery);
         mProgressBar = (ProgressBar) findViewById(R.id.progressbar);
@@ -44,7 +47,9 @@ public class PhoneInfoActivity extends AppCompatActivity {
 
     }
 
-
+    /**
+     * 获取电池状态信息的方法
+     */
     public void getBattery(){
 
     }
@@ -54,6 +59,8 @@ public class PhoneInfoActivity extends AppCompatActivity {
         @Override
         public void onReceive(Context context, Intent intent) {
             //获取电池信息
+
+
             if(intent.getAction().equals(Intent.ACTION_BATTERY_CHANGED)){
             Bundle bundle = intent.getExtras();
             Integer scale = (Integer) bundle.get(BatteryManager.EXTRA_SCALE);//总电量

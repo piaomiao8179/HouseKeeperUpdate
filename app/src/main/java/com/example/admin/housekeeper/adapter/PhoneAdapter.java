@@ -15,6 +15,7 @@ import java.util.ArrayList;
  * Created by admin on 2016/7/14.
  */
 public class PhoneAdapter extends BaseAdapter {
+    //具体的电话 的信息  的  adapter
     private ArrayList<PhoneNumber> mList;
     private Context                mContext;
 

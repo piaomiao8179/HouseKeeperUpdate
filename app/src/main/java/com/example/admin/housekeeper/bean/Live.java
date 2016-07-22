@@ -4,6 +4,7 @@ package com.example.admin.housekeeper.bean;
  * Created by admin on 2016/7/14.
  */
 public class Live {
+    //实体bean  用来封装  电话分类信息（本地电话  或 银行信息）
     private String name;
     private String number;
 

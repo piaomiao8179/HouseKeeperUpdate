@@ -21,7 +21,7 @@ public class SplashActivity extends AppCompatActivity implements Runnable {
         mIv = (ImageView) findViewById(R.id.iv_animation);
         //给控件设置图片背景
         mIv.setBackgroundResource(R.drawable.androidy);
-        //设置动画样式R.anim.anim
+        //设置动画样式R.anim.anim   补间动画
         Animation animation = AnimationUtils.loadAnimation(this,R.anim.anim);
         mIv.startAnimation(animation);
 //        mDrawable = (AnimationDrawable) mIv.getBackground();

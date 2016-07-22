@@ -49,7 +49,7 @@ public class TelSortActivity extends AppCompatActivity implements AdapterView.On
             do{
                 String name = cursor.getString(cursor.getColumnIndex("name"));
                 String idx = cursor.getString(cursor.getColumnIndex("idx"));
-                //将表的数据以封装成对象加载到数据集合中
+                //将表的数据以封装成Bean对象加载到数据集合中
                 mList.add(new Live(name,idx));
             }while (cursor.moveToNext());
         }
@@ -75,7 +75,7 @@ public class TelSortActivity extends AppCompatActivity implements AdapterView.On
     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 //跳转页面
                 Intent intent = new Intent(TelSortActivity.this,ShowNumberActivity.class);
-                //铜鼓点击的位置获取点击位置所对应的数据
+                //通过点击的位置获取点击位置所对应的数据
                 String str = mList.get(position).getNumber();
                 //用intent携带数据到跳转的页面为了查询的时候做一个标示
                 intent.putExtra("id",str);

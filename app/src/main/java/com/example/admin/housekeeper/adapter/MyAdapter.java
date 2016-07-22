@@ -13,6 +13,7 @@ import java.util.ArrayList;
 
 /**
  * Created by admin on 2016/7/14.
+ * 主界面分类信息  GridView的适配器  （本地通话  银行电话等）
  */
 public class MyAdapter extends BaseAdapter {
     private ArrayList<Live> mList;
@@ -39,7 +40,7 @@ public class MyAdapter extends BaseAdapter {
 
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
-        MyAdapter.ViewHolder holder ;
+        MyAdapter.ViewHolder holder ;//优化
         if(convertView == null){
             holder = new ViewHolder();
             convertView = View.inflate(context, R.layout.item,null);
@@ -55,6 +56,8 @@ public class MyAdapter extends BaseAdapter {
 //        tvNumber.setText(mList.get(position).getNumber());
         return convertView;
     }
+
+    //viewholder优化类
     private static class ViewHolder{
         TextView mTextView;
     }

@@ -62,8 +62,10 @@ public class GetPhoneInfoDao {
         } catch (IOException e) {
             e.printStackTrace();
         }
+        //把获取的内存大小转换成最大单位的形式（KB-->GB）
         mTotalMemSize = Formatter.formatFileSize(mContext, mMemSize);
 
+        //空心内存获取
         ActivityManager.MemoryInfo info = new ActivityManager.MemoryInfo();
         ActivityManager am = (ActivityManager) mContext.getSystemService(Context.ACTIVITY_SERVICE);
         am.getMemoryInfo(info);
@@ -75,10 +77,13 @@ public class GetPhoneInfoDao {
 
     //获取CPU的名称及个数
     public void getCpu(){
+
+        //CPU 名称
         if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.LOLLIPOP) {
             mCpuName = Build.SUPPORTED_ABIS;
             Log.d(TAG, "getCpu: " + Arrays.toString(mCpuName));
         }
+        //cpu个数
         try {
             File dir = new File("/sys/devices/system/cpu/");
             File[] files = dir.listFiles(new CpuFilter());
@@ -123,6 +128,7 @@ public class GetPhoneInfoDao {
 //            Log.d(TAG, "getRadio: " + mRadioVersion);
 //        }
 //       mRadioVersion = Build.RADIO;
+        //网上百度的 反射机制  我也不明白
         try {
 
             Class cl = Class.forName("android.os.SystemProperties");
@@ -148,7 +154,7 @@ public class GetPhoneInfoDao {
         return isRoot;
     }
 
-    //文件过滤器
+    //文件过滤器  过滤cpu的个数
     class CpuFilter implements FileFilter {
         public boolean accept(File pathname) {
             if (Pattern.matches("cpu[0-9]", pathname.getName())) {

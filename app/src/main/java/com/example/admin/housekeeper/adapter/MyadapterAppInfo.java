@@ -13,19 +13,24 @@ import com.example.admin.housekeeper.dao.AppInfoDao;
 
 /**
  * Created by Administrator on 2016/7/19.
+ * 本类是手机管理应用软件的适配器
  */
 public class MyadapterAppInfo extends BaseAdapter {
     private Context    mContext;
     private AppInfoDao mInfoDao;
 
     public MyadapterAppInfo(Context context) {
+        //添加构造器，初始化要展示的数据
+        //数据来源  是从AppInfoDao自定义的类获取
         mContext = context;
         mInfoDao = new AppInfoDao(mContext);
+        //实例化对象获取具体的信息（包名  应用名  版本号  图标等）
         mInfoDao.getAppInfo();
     }
 
     @Override
     public int getCount() {
+        //此处的集合是在AppInfoDao自定义的类中定义的集合 里面存储了对应的数据
         if (0 != mInfoDao.mListIcon.size()) {
             return mInfoDao.mListIcon.size();
         }
@@ -66,6 +71,9 @@ public class MyadapterAppInfo extends BaseAdapter {
         return convertView;
     }
 
+    /**
+     * 自定义ViewHolder类优化getView（）
+     */
     private static class ViewHolder{
         ImageView mImageView;
         TextView mTvPackage;

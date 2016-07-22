@@ -19,11 +19,11 @@ public class AppInfoDao {
      * 创建appdao类，获取应用信息
      */
     private Context           mContext;
-    public  List<PackageInfo> mInfoList;
-    public ArrayList<ImageView> mListIcon;
-    public ArrayList<TextView> mListPakageName;
-    public ArrayList<TextView> mListVersionName;
-    public ArrayList<TextView> mListAppName;
+    public  List<PackageInfo> mInfoList;//存储包应用信息
+    public ArrayList<ImageView> mListIcon;//存储应用的图标的集合
+    public ArrayList<TextView> mListPakageName;//存储包名
+    public ArrayList<TextView> mListVersionName;//存储版本号
+    public ArrayList<TextView> mListAppName;//存储应用名
 
     public AppInfoDao(Context context) {
         mContext = context;

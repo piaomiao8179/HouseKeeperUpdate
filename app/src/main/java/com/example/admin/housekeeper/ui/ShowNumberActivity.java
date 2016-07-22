@@ -46,10 +46,13 @@ public class ShowNumberActivity extends AppCompatActivity implements AdapterView
                         String name = cursor.getString(cursor.getColumnIndex("name"));
                         String number = cursor.getString(cursor.getColumnIndex("number"));
                         String id1 = cursor.getString(cursor.getColumnIndex("_id"));
+                        //把查找到的信息封装到bean中添加进集合
                         mList.add(new PhoneNumber(name,number,id1));
                     }while (cursor.moveToNext());
                 }
+        //设置适配器
         mListView.setAdapter(mAdapter);
+        //listview的监听
         mListView.setOnItemClickListener(this);
     }
     @Override

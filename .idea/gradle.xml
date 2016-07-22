@@ -10,6 +10,7 @@
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/app" />
+            <option value="$PROJECT_DIR$/mylibrary" />
             <option value="$PROJECT_DIR$/studentmanager" />
             <option value="$PROJECT_DIR$/viewpager" />
           </set>
@@ -18,6 +19,7 @@
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/app" />
+            <option value="$PROJECT_DIR$/mylibrary" />
             <option value="$PROJECT_DIR$/studentmanager" />
             <option value="$PROJECT_DIR$/viewpager" />
           </set>

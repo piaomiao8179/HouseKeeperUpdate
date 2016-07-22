@@ -4,6 +4,7 @@ package com.example.admin.housekeeper.bean;
  * Created by admin on 2016/7/14.
  */
 public class PhoneNumber {
+    //实体bean  封装  具体的电话信息
     private String name;
     private String number;
     private String id;

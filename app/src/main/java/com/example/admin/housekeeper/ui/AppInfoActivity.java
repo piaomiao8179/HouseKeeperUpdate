@@ -31,16 +31,18 @@ public class AppInfoActivity extends AppCompatActivity {
         mLvShowAppInfo = (ListView) findViewById(R.id.lv_show_app_info);
         // TODO: 2016/7/19 设置适配器
         mLvShowAppInfo.setAdapter(new MyadapterAppInfo(this));
+        //实例化appinfodao对象  获取要卸载的包名packageName
         AppInfoDao appInfoDao = new AppInfoDao(this);
         appInfoDao.getAppInfo();
         final ArrayList<TextView> list = appInfoDao.mListPakageName;
+        //为listview控件设置点击事件
         mLvShowAppInfo.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                //卸载点击的软件
                 Intent intent = new Intent(Intent.ACTION_DELETE);
                 intent.setData(Uri.parse("package:"+list.get(position).getText()));
                 startActivity(intent);
-
             }
         });
     }
